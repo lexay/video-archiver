@@ -1,0 +1,16 @@
+version: "3.9"
+services:
+  yt-dlp:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: 'downloader'
+    volumes:
+      - videos:/home/deploy/videos
+    command: >
+      yt-dlp -f 'bv*[height<=1080]+wa' \
+        -o '/home/deploy/videos/%(playlist)s/%(playlist_index)s - %(title)s.%(ext)s' \
+        --batch .playlist
+
+volumes:
+  videos:

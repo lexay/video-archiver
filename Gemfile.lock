@@ -1,0 +1,13 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    logger (1.6.0)
+
+PLATFORMS
+  x86_64-linux
+
+DEPENDENCIES
+  logger
+
+BUNDLED WITH
+   2.4.19
