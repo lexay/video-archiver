@@ -9,7 +9,7 @@ services:
       - videos:/home/deploy/videos
     env_file:
       - .env
-    command: sh ./script.sh
+    command: sh ./scripts/bulk-download
 
 volumes:
   videos:
