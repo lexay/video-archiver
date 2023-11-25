@@ -13,3 +13,6 @@ services:
 
 volumes:
   videos:
+    driver: value
+    driver_opts:
+        size: 20G
