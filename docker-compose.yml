@@ -7,6 +7,8 @@ services:
     container_name: 'downloader'
     volumes:
       - videos:/home/deploy/videos
+    env_file:
+      - .env
     command: >
       cat .playlist | \
       yt-dlp --format 'bv*[height<=1080]+wa' \
