@@ -10,11 +10,11 @@ services:
     env_file:
       - .env
     command: >
-      cat .playlist | \
+      printf "%s" "$LIST" | \
       yt-dlp --format 'bv*[height<=1080]+wa' \
         --output '/home/deploy/videos/%(playlist)s/%(playlist_index)s - %(title)s.%(ext)s' \
-        --batch -
         --limit-rate '5M'
+        --batch -
 
 volumes:
   videos:
