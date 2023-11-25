@@ -8,9 +8,10 @@ services:
     volumes:
       - videos:/home/deploy/videos
     command: >
+      cat .playlist | \
       yt-dlp --format 'bv*[height<=1080]+wa' \
         --output '/home/deploy/videos/%(playlist)s/%(playlist_index)s - %(title)s.%(ext)s' \
-        --batch '.playlist'
+        --batch -
         --limit-rate '5M'
 
 volumes:

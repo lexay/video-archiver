@@ -1,4 +1,4 @@
-FROM alpine:3.18 AS base
+FROM alpine:3.18
 
 RUN apk add --no-cache yt-dlp
 RUN adduser -D deploy
