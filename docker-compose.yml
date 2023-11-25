@@ -9,12 +9,7 @@ services:
       - videos:/home/deploy/videos
     env_file:
       - .env
-    command: >
-      printf "%s" "$LIST" | \
-      yt-dlp --format 'bv*[height<=1080]+wa' \
-        --output '/home/deploy/videos/%(playlist)s/%(playlist_index)s - %(title)s.%(ext)s' \
-        --limit-rate '5M'
-        --batch -
+    command: sh ./script.sh
 
 volumes:
   videos:
