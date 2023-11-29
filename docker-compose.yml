@@ -5,14 +5,8 @@ services:
       context: .
       dockerfile: Dockerfile
     container_name: 'downloader'
-    volumes:
-      - videos:/home/deploy/videos
     env_file:
       - .env
+    volumes:
+      - ${TARGET_DIR}:/home/deploy/videos
     command: sh ./scripts/bulk-download
-
-volumes:
-  videos:
-    driver: value
-    driver_opts:
-        size: 20G
