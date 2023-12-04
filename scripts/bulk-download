@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-cat .playlist | \
+cat $PLAYLIST_PATH | \
   yt-dlp --format 'bv*[height<=1080]+wa' \
     --output '/home/deploy/videos/%(playlist)s/%(playlist_index)s - %(title)s.%(ext)s' \
     --limit-rate $RATE_LIMIT \
