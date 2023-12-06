@@ -5,11 +5,11 @@ hood.
 
 ### Environment variables
 
-`TARGET_DIR` - path to the host directory, which will be mounted to the docker
+`TARGET_DIR` - HOST path to the directory, which will be mounted to the docker
 container for saving downloaded videos.
 
-`PLAYLIST` - path to the playlist file that SHOULD be in the
-mounted directory.
+`PLAYLIST` - CONTAINER path to the playlist file in the mounted directory
+(`/home/deploy/videos/.playlist` by default).
 
 `LIMIT_RATE` - rate at which `yt-dlp` will be downloading videos(1/2 of your max is recommeded).
 
