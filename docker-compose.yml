@@ -8,5 +8,5 @@ services:
     env_file:
       - .env
     volumes:
-      - ${TARGET_DIR}:/home/deploy/videos
+      - ${DOWNLOAD}:/home/deploy/videos
     command: sh ./scripts/bulk-download
