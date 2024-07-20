@@ -6,4 +6,5 @@
     --limit-rate=$RATE_LIMIT \
     --extractor-args=$EXTRACTOR_ARGS \
     --concurrent-fragments=$FRAGMENTS \
+    --merge-output-format=$FORMATS \
     --batch-file=$PLAYLIST
