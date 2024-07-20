@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
   yt-dlp \
-    --format="bv*[height<=${FORMAT}]+wa" \
+    --format="bv*[height<=${HEIGHT}]+wa" \
     --output="/home/deploy/videos/%(playlist)s/%(playlist_index)s - %(title)s.%(ext)s" \
     --limit-rate=$RATE_LIMIT \
     --extractor-args=$EXTRACTOR_ARGS \
