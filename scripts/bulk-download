@@ -4,4 +4,6 @@
     --format="bv*[height<=${FORMAT}]+wa" \
     --output="/home/deploy/videos/%(playlist)s/%(playlist_index)s - %(title)s.%(ext)s" \
     --limit-rate=$RATE_LIMIT \
+    --extractor-args=$EXTRACTOR_ARGS \
+    --concurrent-fragments=$FRAGMENTS \
     --batch-file=$PLAYLIST
