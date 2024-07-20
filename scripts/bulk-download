@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
-  yt-dlp --format "bv*[height<=${FORMAT}]+wa" \
-    --output '/home/deploy/videos/%(playlist)s/%(playlist_index)s - %(title)s.%(ext)s' \
-    --limit-rate $RATE_LIMIT \
-    --batch-file $PLAYLIST
+  yt-dlp \
+    --format="bv*[height<=${FORMAT}]+wa" \
+    --output="/home/deploy/videos/%(playlist)s/%(playlist_index)s - %(title)s.%(ext)s" \
+    --limit-rate=$RATE_LIMIT \
+    --batch-file=$PLAYLIST
